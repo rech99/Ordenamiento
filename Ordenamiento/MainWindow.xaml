@@ -1,0 +1,25 @@
+﻿<Window x:Class="Ordenamiento.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ordenamiento"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="lstNumeros" HorizontalAlignment="Left" Height="335" Margin="10,37,0,0" VerticalAlignment="Top" Width="393">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Nombre}" Header="Nombre" Width="120"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Promedio}" Header="Promedio" Width="120"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Faltas}" Header="Faltas" Width="120"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnOrdenar" Content="Ordenar Shell por Promedio" HorizontalAlignment="Left" Margin="427,38,0,0" VerticalAlignment="Top" Width="184" Click="BtnOrdenar_Click"/>
+        <Button x:Name="btnOrdenarbbl" Content="Ordenar Bubble por Promedio" HorizontalAlignment="Left" Margin="427,74,0,0" VerticalAlignment="Top" Width="184" Click="BtnOrdenarbbl_Click"/>
+        <Button x:Name="btnOrdenar_Copy" Content="Ordenar Shell por Faltas" HorizontalAlignment="Left" Margin="427,129,0,0" VerticalAlignment="Top" Width="184" Click="BtnOrdenar1"/>
+        <Button x:Name="btnOrdenarbbl_Copy" Content="Ordenar Bubble por Faltas" HorizontalAlignment="Left" Margin="427,165,0,0" VerticalAlignment="Top" Width="184" Click="BtnOrdenarbbl2"/>
+
+    </Grid>
+</Window>
